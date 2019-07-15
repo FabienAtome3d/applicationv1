@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Printers</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p>Ici afficher la liste des imprimantes</p>
+</ion-content>
+
+<ion-footer padding>
+    <icon-list>
+        <button ion-item
+                *ngFor="let printer in printersList; let i = index"
+                (click)="onLoadPrinter(i)"> {{printer.name}}</button>
+    </icon-list>
+</ion-footer>
